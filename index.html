@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="welcome-container">
+        <h2>WELCOME TO TECHNICAL QUIZ!!!</h2>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div class="quiz_container" id="quiz-container" style="display: none;">
+        <h2 id="question-text"></h2>
+        <div id="options-container">
+            <label class="option-label" id="option-0-label"></label><br>
+            <label class="option-label" id="option-1-label"></label><br>
+            <label class="option-label" id="option-2-label"></label><br>
+            <label class="option-label" id="option-3-label"></label><br>
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-btn" onclick="previousQuestion()" style="display: none;">Previous</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+            <button id="submit-btn" onclick="submitQuiz()" style="display: none;">Submit</button>
+        </div>
+    </div>
+
+    <div class="container" id="result-container" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: <strong id="score"></strong> / 5</p>
+        <p id="message"></p>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
